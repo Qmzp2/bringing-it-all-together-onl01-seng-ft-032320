@@ -68,8 +68,7 @@ class Dog
       SELECT * FROM dogs
       WHERE name = ? AND breed = ?
       SQL
-
-
+      
       dog = DB[:conn].execute(sql, name, breed).first
 
       if dog
@@ -97,5 +96,4 @@ class Dog
 
       DB[:conn].execute(sql, self.name, self.breed, self.id)
   end
-
 end
